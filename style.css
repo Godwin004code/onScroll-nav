@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100%;
+    font-family: monospace;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.header {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.banner {
+    width: 100%;
+}
+.banner-text {
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+}
+.banner img {
+    width: 100%;
+    height: 100vh; 
+    object-fit: fill;
+}
+footer {
+    width: 100%;
+    background-color: black;
+    padding: 1rem 0;
+    color: white;
+    text-align: center;
+}
+footer i {
+    color: red;
+    font-size: 1.3rem;
+}
+
+nav ul {
+    display: flex;
+}
+li {
+    padding: 0 .5rem 0 0;
+    font-size: 1.3rem;
+    
+    list-style-type: none;
+}
+a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.icon {
+    display: none;
+    color: white;
+}
+
+/* functionlaities */
+
+body header {
+    display: none;
+    transition: all ease 2s;
+}
+body.show-nav header {
+    display: block;
+    background-color: black;
+    padding: 1rem 0;
+    transition: all ease 2s;
+}
+.logo h2 {
+    color: aliceblue;
+    font-size: 2rem;
+}
+body.show-nav .banner-text {
+    display: none;
+}
+.text {
+    width: 90%;
+    margin: 0 auto;
+}
+.text p {
+    margin-bottom: 1.4rem;
+}
+.text p:nth-child(1) {
+    margin-top: 1.4rem;
+}
+@media only screen and (max-width: 768px) {
+    body {
+        width: 768px;
+        max-width: 100%;
+    }
+    header nav  {
+        display: none;
+    }
+    .icon {
+        display: block;
+        font-size: 1.6rem;
+    }
+    header.show-nav {
+        position: relative;
+    }
+    header nav ul {
+        flex-direction: column;
+        position: absolute;
+        background-color: black;
+        left: 0;
+        padding-left: 5%;
+        top: 95%;
+        right: 0;
+    }
+    li {
+        padding-bottom: 1.4rem;
+    }
+    
+    .icon .rem {
+        display: none;
+    }
+    header.show-item nav {
+        display: block;
+    }
+    header.show-item .rem {
+        display: block;
+    }
+    header.show-item .bars {
+        display: none;
+    }
+}
